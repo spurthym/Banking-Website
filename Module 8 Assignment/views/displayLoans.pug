@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      title The Trending Loans
+
+  body
+    // DARK BLUE HEADER
+    include _header
+    
+
+
+    //CONTENT
+    block content
+     <br>
+        h1 This Loans you have requested for 
+        <br>
+        <br>
+        div
+          table.table-header
+            thead
+              tr
+            
+                th(scope='col') Loan Type
+                th(scope='col') Amount
+                th(scope='col') Interest Rate
+                th(scope='col') Start Date
+                th(scope='col') Term
+                th(scope='col') Description
+            tbody
+              each loan in loan1 
+                tr.table-secondary
+                  td=loan.loanType
+                  td=loan.amount
+                  td=loan.interestRate
+                  td=loan.startDate
+                  td=loan.loanTerm
+                  td=loan.description
+        
