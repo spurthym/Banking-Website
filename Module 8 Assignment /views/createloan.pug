@@ -1,0 +1,63 @@
+doctype html
+include _header
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet' href='/css/style.css')
+      link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+      title New The Trending Courses
+
+  body
+  
+
+    //section class="overview"
+    main.main
+      .card-container
+        .card
+          .card__header
+          .card__details
+            h4.card__sub-heading Request For a New Loan
+            p.card__text Please enter the following Details
+            
+            .card__data    
+              form(action='/loan', method='post')
+                <label for="amount">Loan Amount</label>
+                <input type="text" id="amount" name="amount"><br><br>
+                
+                <label for="loanTerm">Years</label>
+                <input type="text" id="loanTerm" name="loanTerm"><br><br>
+                <label for="startDate">Starting From</label>
+                <input type="date" id="startDate" name="startDate"><br><br>
+
+                <label for="loanType">Loan Type</label>
+                <select name="loanType" id="loanType">
+                <option value="Home">Home</option>
+                <option value="Car">Car</option>
+                <option value="Boat">Boat</option>
+                <option value="Education">Education</option>
+                </select>
+                br
+                br
+
+
+                <label for="description">Description</label>
+                  <textarea type="textarea" id="description" name="description"></textarea>
+                  <br><br>
+              
+            
+               
+                <input class="button" type="submit" value="Request">
+      
+   
+        .card
+          .card_interest
+            h1 Please Note the Intrest Rate are as follows
+            <br>
+              h2 Home Loan:5%
+              h2 Car Loan:8%
+              h2 Boat Loan:15%
+              h2 Education Loan:2%
+            
